@@ -9,7 +9,7 @@ A = rand(0:0.4:10, m, n)
 x = rand(-2:0.1:2, n)
 y = rand(-2:0.1:2, m)
 
-function columnOrientedGaxpy(A::Matrix, x::Vector, y::Vector)
+function column_oriented_gaxpy(A::Matrix, x::Vector, y::Vector)
     m, n = size(A)
 
     res = deepcopy(y)
@@ -23,7 +23,7 @@ function columnOrientedGaxpy(A::Matrix, x::Vector, y::Vector)
     return res
 end
 
-y1 = columnOrientedGaxpy(A, x, y)  # same as y .+ A * x
+y1 = column_oriented_gaxpy(A, x, y)  # same as y .+ A * x
 
 println("Matrix A : ")
 display(A)
@@ -39,7 +39,7 @@ display(y1)
 # display(y .+ A * x)
 println()
 
-function columnPartitionedColumnOrientedGaxpy(A::Matrix, x::Vector, y::Vector)
+function column_partitioned_column_oriented_gaxpy(A::Matrix, x::Vector, y::Vector)
     n = size(A, 2)
 
     res = deepcopy(y)
@@ -51,7 +51,7 @@ function columnPartitionedColumnOrientedGaxpy(A::Matrix, x::Vector, y::Vector)
     return res
 end
 
-y2 = columnPartitionedColumnOrientedGaxpy(A, x, y)
+y2 = column_partitioned_column_oriented_gaxpy(A, x, y)
 
 println("Gaxpy Output : ")
 display(y2)

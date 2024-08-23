@@ -16,7 +16,7 @@ y = Vector([4; 5])
 
 A = rand(-2:0.3:2, size(x, 1), size(y, 1))
 
-function outerProductUpdate(A::Matrix, x::Vector, y::Vector)
+function outer_product_update(A::Matrix, x::Vector, y::Vector)
     m, n = size(A)
 
     res = deepcopy(A)
@@ -33,12 +33,12 @@ end
 println("Original Matrix A : ")
 display(A)
 
-A1 = outerProductUpdate(A, x, y)
+A1 = outer_product_update(A, x, y)
 
 println("Outer Product Updated Matrix A : ")
 display(A1)
 
-function outerProductUpdateWithRowOrientedSaxpy(A::Matrix, x::Vector, y::Vector)
+function outer_product_update_with_row_oriented_saxpy(A::Matrix, x::Vector, y::Vector)
     m, n = size(A)
 
     res = deepcopy(A)
@@ -52,12 +52,12 @@ function outerProductUpdateWithRowOrientedSaxpy(A::Matrix, x::Vector, y::Vector)
     return res
 end
 
-A2 = outerProductUpdateWithRowOrientedSaxpy(A, x, y)
+A2 = outer_product_update_with_row_oriented_saxpy(A, x, y)
 
 println("Outer Product Updated Matrix A (Row-Oriented Saxpy) : ")
 display(A2)
 
-function outerProductUpdateWithColumnOrientedSaxpy(A::Matrix, x::Vector, y::Vector)
+function outer_product_update_with_column_oriented_saxpy(A::Matrix, x::Vector, y::Vector)
     m, n = size(A)
 
     res = deepcopy(A)
@@ -69,7 +69,7 @@ function outerProductUpdateWithColumnOrientedSaxpy(A::Matrix, x::Vector, y::Vect
     return res
 end
 
-A3 = outerProductUpdateWithColumnOrientedSaxpy(A, x, y)
+A3 = outer_product_update_with_column_oriented_saxpy(A, x, y)
 
 println("Outer Product Updated Matrix A (column-Oriented Saxpy) : ")
 display(A3)

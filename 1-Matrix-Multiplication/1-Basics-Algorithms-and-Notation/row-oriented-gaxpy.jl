@@ -9,7 +9,7 @@ A = rand(0:0.4:10, m, n)
 x = rand(-2:0.1:2, n)
 y = rand(-2:0.1:2, m)
 
-function rowOrientedGaxpy(A::Matrix, x::Vector, y::Vector)
+function row_oriented_gaxpy(A::Matrix, x::Vector, y::Vector)
     m, n = size(A)
 
     res = deepcopy(y)
@@ -23,7 +23,7 @@ function rowOrientedGaxpy(A::Matrix, x::Vector, y::Vector)
     return res
 end
 
-y1 = rowOrientedGaxpy(A, x, y)  # same as y .+ A * x
+y1 = row_oriented_gaxpy(A, x, y)  # same as y .+ A * x
 
 println("Matrix A : ")
 display(A)
@@ -39,7 +39,7 @@ display(y1)
 # display(y .+ A * x)
 println()
 
-function rowPartitionedRowOrientedGaxpy(A::Matrix, x::Vector, y::Vector)
+function row_partitioned_row_oriented_gaxpy(A::Matrix, x::Vector, y::Vector)
     m = size(A, 1)
 
     res = deepcopy(y)
@@ -51,7 +51,7 @@ function rowPartitionedRowOrientedGaxpy(A::Matrix, x::Vector, y::Vector)
     return res
 end
 
-y2 = rowPartitionedRowOrientedGaxpy(A, x, y)
+y2 = row_partitioned_row_oriented_gaxpy(A, x, y)
 
 println("Gaxpy Output : ")
 display(y2)

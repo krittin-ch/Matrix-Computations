@@ -41,7 +41,7 @@ B = Matrix([
     7 8
 ])
 
-function matrixMultiplication(A::Matrix, B::Matrix)
+function matrix_multiplication(A::Matrix, B::Matrix)
     m, r = size(A)
     r_b, n =size(B)
 
@@ -63,14 +63,14 @@ function matrixMultiplication(A::Matrix, B::Matrix)
     return C
 end
 
-C1 = matrixMultiplication(A, B)
+C1 = matrix_multiplication(A, B)
 
 println("Matrix Multiplication Output : ")
 display(C1)
 
 # There are 6 possibilities of computing matrix multiplication
 # ijk, jik, ikj, jki, kij, kji
-function matrixMultiplicationV2(A::Matrix, B::Matrix)
+function matrix_multiplication_v2(A::Matrix, B::Matrix)
     m, r = size(A)
     r_b, n =size(B)
 
@@ -92,12 +92,12 @@ function matrixMultiplicationV2(A::Matrix, B::Matrix)
     return C
 end
 
-C2 = matrixMultiplicationV2(A, B)
+C2 = matrix_multiplication_v2(A, B)
 
 println("Matrix Multiplication Version II Output : ")
 display(C2)
 
-function dotProductMatrixMultiplication(A::Matrix, B::Matrix)
+function dot_product_matrix_multiplication(A::Matrix, B::Matrix)
     m, r = size(A)
     r_b, n =size(B)
     
@@ -117,12 +117,12 @@ function dotProductMatrixMultiplication(A::Matrix, B::Matrix)
     return C
 end
 
-C3 = dotProductMatrixMultiplication(A, B)
+C3 = dot_product_matrix_multiplication(A, B)
 
 println("Dot Product Matrix Multiplication Output : ")
 display(C3)
 
-function gaxpyMatrixMultiplication(A::Matrix, B::Matrix)
+function gaxpy_matrix_multiplication(A::Matrix, B::Matrix)
     m, r = size(A)
     r_b, n =size(B)
     
@@ -141,12 +141,12 @@ function gaxpyMatrixMultiplication(A::Matrix, B::Matrix)
     return C
 end
 
-C4 = gaxpyMatrixMultiplication(A, B)
+C4 = gaxpy_matrix_multiplication(A, B)
 
 println("Gaxpy Matrix Multiplication Output : ")
 display(C4)
 
-function saxpyMatrixMultiplication(A::Matrix, B::Matrix)
+function saxpy_matrix_multiplication(A::Matrix, B::Matrix)
     m, r = size(A)
     r_b, n =size(B)
     
@@ -166,12 +166,12 @@ function saxpyMatrixMultiplication(A::Matrix, B::Matrix)
     return C
 end
 
-C5 = saxpyMatrixMultiplication(A, B)
+C5 = saxpy_matrix_multiplication(A, B)
 
 println("Saxpy Matrix Multiplication Output : ")
 display(C5)
 
-function saxpyWithGaxpyMatrixMultiplication(A::Matrix, B::Matrix)
+function saxpy_with_gaxpy_matrix_multiplication(A::Matrix, B::Matrix)
     m, r = size(A)
     r_b, n =size(B)
     
@@ -189,12 +189,12 @@ function saxpyWithGaxpyMatrixMultiplication(A::Matrix, B::Matrix)
     return C
 end
 
-C6 = saxpyWithGaxpyMatrixMultiplication(A, B)
+C6 = saxpy_with_gaxpy_matrix_multiplication(A, B)
 
 println("Saxpy with Gaxpy Matrix Multiplication Output : ")
 display(C6)
 
-function outerProductMatrixMultiplication(A::Matrix, B::Matrix)
+function outer_product_matrix_multiplication(A::Matrix, B::Matrix)
     m, r = size(A)
     r_b, n =size(B)
     
@@ -212,7 +212,7 @@ function outerProductMatrixMultiplication(A::Matrix, B::Matrix)
     return C
 end
 
-C7 = saxpyWithGaxpyMatrixMultiplication(A, B)
+C7 = outer_product_matrix_multiplication(A, B)
 
 println("Outer Product Matrix Multiplication Output : ")
 display(C7)
