@@ -1,4 +1,5 @@
-# Row-Oriented Gaxpy
+# Column-Oriented Gaxpy
+
 # If `A` is a matrix of dimension (m, n), vector `x` with size `n`, vector `y` with size `m`,
 # then this algorithm overwrites `y` with `A * x + y`
 

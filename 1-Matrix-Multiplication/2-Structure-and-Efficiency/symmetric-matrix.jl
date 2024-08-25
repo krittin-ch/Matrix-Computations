@@ -1,3 +1,5 @@
+# Symmetric Matrix
+
 #=
     If A is construct with real number.
     A is symmetric if A^T = A and skew-symmetric if A^T = -A
@@ -7,15 +9,15 @@
 
     Symmetric Matrices can be stored in a vector with a half size of the matrix
 
-    A = [
-        1 2 3
-        2 4 5
-        3 5 6
-    ]
+        A = [
+            1 2 3
+            2 4 5
+            3 5 6
+        ]
 
-    A.vec = [1 2 3 4 5 6]
+        A.vec = [1 2 3 4 5 6]
 
-    A.vec[(n - j/2)(j - 1) + i] = A[i, j]
+        A.vec[(n - j/2)(j - 1) + i] = A[i, j]
 =#
 
 function symmetric_storage(A::Matrix)

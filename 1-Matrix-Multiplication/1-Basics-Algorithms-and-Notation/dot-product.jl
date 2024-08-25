@@ -1,4 +1,5 @@
 # Dot Product
+
 # If `x` and `y` are vector with the same size, then their dot product is `c = transpose(x) * y`
 
 x = Vector(0:6)
