@@ -11,7 +11,7 @@
 
         Gaxpy Operation : y = y + A * x
 
-        y[idx] = y[idx] + A[idx] * x
+        `y[idx] = y[idx] + A[idx] * x`
 
     Column-Blocked Gaxpy :
 
@@ -21,7 +21,7 @@
 
         Gaxpy Operation : y = y + A * x
 
-        y = y + A[jdx] * x[jdx]
+        `y = y + A[jdx] * x[jdx]`
 =#
 
 

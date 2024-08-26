@@ -1,11 +1,11 @@
 # Block Matrix Multiplication
 
 #=
-    If A, B, and C are N-by-N block matrices
+    If `A`, `B`, and `C` are N-by-N block matrices
 
     C(a, b) = C(a, b) + Sigma_{r=1 to N} A(a, r) * B(r, b)
 
-    for a = 1:N and b = 1:N     
+    for `a = 1:N`and `b = 1:N`     
 =#
 
 function block_matrix_multiplication(A::Matrix, B::Matrix, l::Int)

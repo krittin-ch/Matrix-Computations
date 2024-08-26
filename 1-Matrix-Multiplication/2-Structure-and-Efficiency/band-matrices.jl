@@ -12,8 +12,8 @@
         0 0 0 0 0
     ]
 
-    lower bandwidth = p if a_ij = 0 whenever i > j + p
-    upper bandwidth = q if a_ij = 0 whenever j > i + q
+    lower bandwidth = `p` if `a_ij = 0` whenever `i > j + p`
+    upper bandwidth = `q` if `a_ij = 0` whenever `j > i + q`
 =#
 
 function band_matrix_widths(A::AbstractMatrix)

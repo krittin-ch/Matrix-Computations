@@ -13,8 +13,8 @@
 
     A_ij = A(tau + 1:tau + m_i, mu + 1:mu + n_j)
 
-    tau = m_1 + m_2 + ... + m_{i-1}
-    mu = n_1 + n_2 + ... + n_{j-1}
+    `tau` = m_1 + m_2 + ... + m_{i-1}
+    `mu` = n_1 + n_2 + ... + n_{j-1}
 =#
 
 function get_block_matrix(A::Matrix, row::Int, col::Int, m::Int, n::Int)
